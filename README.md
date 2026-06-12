@@ -59,6 +59,6 @@ pytest -v
 * **Massa de Dados Dinâmica:** Utilizei e-mails e nomes gerados aleatoriamente a cada execução para evitar conflitos de duplicidade na base da ServeRest.
 * **Asserts Robustos:** Além de validar o status code, verifiquei a estrutura do contrato (JSON response) para garantir que a API está devolvendo os dados conforme o esperado.
 
-## Autora
+## Sobre a Autora
 
 O presente projeto foi desenvolvido por **Fernanda Bastos dos Santos** (@codebyfernanda), estudante de Análise e Desenvolvimento de Sistemas no Mackenzie, durante o BOOTCAMP | AWS AI FDE DRIVEN QUALITY ENGINEERING, da Compass UOL com AI/R Company.
