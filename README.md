@@ -23,7 +23,7 @@ A presente suíte cobre os fluxos principais de CRUD (CREATE-READ-UPDATE-DELETE)
 1. **Clone o repositório:**
 ```bash
 git clone [https://github.com/codebyfernanda/bootcamp-QA-2026-desafios.git](https://github.com/codebyfernanda/bootcamp-QA-2026-desafios.git)
-cd nome-do-repositorio
+cd bootcamp-QA-2026-desafios
 
 ```
 
