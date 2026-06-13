@@ -117,6 +117,9 @@ cd bootcamp-QA-2026-desafios
 python -m venv venv
 venv\Scripts\activate
 
+```
+
+```
 # Linux/macOS
 python -m venv venv
 source venv/bin/activate
