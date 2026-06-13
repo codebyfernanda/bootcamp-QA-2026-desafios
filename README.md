@@ -61,4 +61,7 @@ pytest -v
 
 ## Sobre a Autora
 
-O presente projeto foi desenvolvido por **Fernanda Bastos dos Santos** (@codebyfernanda), estudante de Análise e Desenvolvimento de Sistemas no Mackenzie, durante o BOOTCAMP | AWS AI FDE DRIVEN QUALITY ENGINEERING, da Compass UOL com AI/R Company.
+O presente projeto foi desenvolvido por **Fernanda Bastos dos Santos** [(@codebyfernanda)](https://github.com/codebyfernanda), estudante de **Análise e Desenvolvimento de Sistemas** no Mackenzie, durante o **BOOTCAMP | AWS AI FDE DRIVEN QUALITY ENGINEERING**, da Compass UOL com [AI/R Company](https://aircompany.ai/).
+
+## Agradecimentos Especiais
+Gostaria de expressar meus agradecimentos à Squad 2 pelo engajamento, por toda troca de conhecimento e, também, pelo suporte durante o processo do nosso Bootcamp. Deixo aqui um agradecimento especial aos meus colegas [Renan Pacheco](https://github.com/Renanpacheco) e [Vitor Kunicki](https://github.com/vitto2099). A paciência, a disponibilidade e o auxílio técnico de vocês foram fundamentais para a superação dos desafios dessa entrega. Muito obrigada! :)
