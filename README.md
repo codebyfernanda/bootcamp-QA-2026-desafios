@@ -47,8 +47,7 @@ Para garantir o padrão de qualidade, cada teste deve atender aos critérios:
 - [x] Validação estrutural completa via `JSON Schema`.
 </details>
 
-<details>
-<summary><b>4. Estrutura do Projeto</b></summary>
+## Estrutura do Projeto 
 
 ```text
 ├── tests/              
@@ -60,8 +59,6 @@ Para garantir o padrão de qualidade, cada teste deve atender aos critérios:
 │   └── test_carrinhos.py   # Testes do módulo de carrinhos
 
 ```
-<details>
-
 --- 
 
 # Métricas e Resultados
