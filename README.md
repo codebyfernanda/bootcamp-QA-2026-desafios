@@ -16,77 +16,48 @@ Durante a [quarta semana](https://github.com/codebyfernanda/bootcamp-QA-2026-des
 
 ---
 
-# Plano de Testes
+# Plano de Testes: Detalhamento do Projeto
 
 <details>
-  <summary><b> ### 1. Objetivo e Estratégia </b></summary>
+<summary><b>1. Objetivo e Estratégia</b></summary>
+
 * **Objetivo:** Assegurar a qualidade funcional, estabilidade de contrato e confiabilidade dos principais fluxos de negócio da API ServeRest.
 * **Estratégia:** Automação de testes funcionais e de contrato na camada de Back-end (API).
 * **Stack Tecnológica:** Python 3.13.x, Pytest, Requests e JSONSchema.
 * **Escopo Coberto:** Endpoints `/login`, `/usuarios`, `/produtos` e `/carrinhos`.
-* **Fora de Escopo:** Testes de carga, estresse e performance. 
+* **Fora de Escopo:** Testes de carga, estresse e performance.
 </details>
 
+<details>
+<summary><b>2. Cenários de Teste Mapeados</b></summary>
 
+* **`test_login.py`**: Suíte de autenticação abrangendo cenários de sucesso e falhas por campos ausentes ou dados inválidos.
+* **`test_usuarios.py`**: CRUD completo (POST, GET, PUT, DELETE) com validações de e-mail duplicado e integridade de dados.
+* **`test_produtos.py`**: CRUD de produtos com validação de tokens de administrador e restrições de campos obrigatórios.
+* **`test_carrinhos.py`**: Gestão de compras, incluindo estoques insuficientes e cancelamento de pedidos com retorno de estoque.
+</details>
 
-### 2. Cenários de Teste Mapeados
+<details>
+<summary><b>3. Definition of Done (DoD)</b></summary>
 
-#### Módulo: `test_login.py` (Autenticação)
-* `test_login_successfully` (POST - 200)
-* `test_login_invalid_password` (POST - 401)
-* `test_login_nonexistent_user` (POST - 404)
-* `test_login_without_name` (POST - 400)
-* `test_login_without_email` (POST - 400)
-* `test_login_without_password` (POST - 400)
-* `test_login_without_administrador` (POST - 400)
+Para garantir o padrão de qualidade, cada teste deve atender aos critérios:
+- [x] Nomenclatura padronizada: `test_<action>_<expected_result>`.
+- [x] *Fixtures* centralizadas (`conftest.py`).
+- [x] Massa de dados dinâmica (UUID).
+- [x] Validação estrutural completa via `JSON Schema`.
+</details>
 
-#### Módulo: `test_usuarios.py` (CRUD de Usuários)
-* `test_create_user_successfully` (POST - 201)
-* `test_create_user_duplicated_email` (POST - 400)
-* `test_list_all_users` (GET - 200)
-* `test_delete_user_successfully_by_id` (DELETE - 200 / 204)
-* `test_update_user_successfully` (PUT - 200)
-* `test_update_user_duplicated_email` (PUT - 400)
-
-#### Módulo: `test_produtos.py` (CRUD de Produtos)
-* `test_create_product_successfully_with_admin_token` (POST - 200 / 201)
-* `test_create_product_without_admin_token` (POST - 401 / 403)
-* `test_create_product_without_name` (POST - 400)
-* `test_create_product_without_price` (POST - 400)
-* `test_create_product_without_description` (POST - 400)
-* `test_search_product_by_id` (GET - 200  / 201)
-* `test_update_product_with_token` (PUT - 200 / 201)
-* `test_update_product_without_token` (PUT - 401)
-* `test_delete_product_successfully` (DELETE - 200 / 204)
-
-#### Módulo: `test_carrinhos.py` (Gestão de Carrinhos)
-* `test_create_cart_successfully` (POST - 201)
-* `test_create_cart_insufficient_stock` (POST - 400 / 422)
-* `test_conclude_purchase_success` (DELETE 200 / 204)
-* `test_cancel_purchase_and_stock_return` (DELETE - 200 / 204)
-
----
-
-## Definition of Done (DoD)
-
-Para garantir o padrão de qualidade e aceitação de novos cenários na suíte, cada teste deve atender aos seguintes critérios:
-- [x] Nomenclatura padronizada seguindo a convenção `test_<action>_<expected_result>`.
-- [x] Utilização de *fixtures* centralizadas no arquivo `conftest.py` para setup e teardown.
-- [x] Massa de dados dinâmica e isolada utilizando randomização (ex: biblioteca UUID).
-- [x] Validação estrutural completa de contrato via `JSON Schema`.
-
----
-
-## Estrutura do Projeto
+<details>
+<summary><b>4. Estrutura do Projeto</b></summary>
 
 ```text
-├── tests/                                      
-│   ├── conftest.py         # Configurações globais e fixtures do Pytest
-│   ├── schemas.py          # Definições dos JSON Schemas para testes de contrato
-│   ├── test_login.py       # Cenários de teste de autenticação
-│   ├── test_produtos.py    # Cenários de teste do módulo de produtos
-│   ├── test_usuarios.py    # Cenários de teste do módulo de usuários
-│   └── test_carrinhos.py   # Cenários de teste do módulo de carrinhos
+├── tests/              
+│   ├── conftest.py         # Configurações globais e fixtures
+│   ├── schemas.py          # Definições de JSON Schemas
+│   ├── test_login.py       # Testes de autenticação
+│   ├── test_produtos.py    # Testes do módulo de produtos
+│   ├── test_usuarios.py    # Testes do módulo de usuários
+│   └── test_carrinhos.py   # Testes do módulo de carrinhos
 
 ```
 
