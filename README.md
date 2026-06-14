@@ -1,9 +1,11 @@
 # Desafio Técnico | Bootcamp AWS AI FDE Driven Quality Engineering 
 
-![Python](https://img.shields.io/badge/Python-3.13-3776AB?logo=python&logoColor=white)
-![Pytest](https://img.shields.io/badge/Pytest-9.0-0A9EDC?logo=pytest&logoColor=white)
-![Coverage](https://img.shields.io/badge/Coverage-100%25-brightgreen)
-![Status](https://img.shields.io/badge/Status-Finalizado-success)
+<p align="center">
+  <img src="https://img.shields.io/badge/Python-3.13-3776AB?logo=python&logoColor=white" />
+  <img src="https://img.shields.io/badge/Pytest-9.0-0A9EDC?logo=pytest&logoColor=white" />
+  <img src="https://img.shields.io/badge/Coverage-100%25-brightgreen" />
+  <img src="https://img.shields.io/badge/Status-Finalizado-success" />
+</p>
 
 Este projeto consiste em uma suíte de testes automatizados desenvolvida em **Python**, utilizando o framework **Pytest**. O objetivo principal é validar as regras de negócio e os contratos dos endpoints de *Usuários*, *Produtos*, *Login* e *Carrinhos* da API pública **ServeRest**, garantindo a integridade das informações, a resiliência do sistema e a exatidão das respostas.
 
