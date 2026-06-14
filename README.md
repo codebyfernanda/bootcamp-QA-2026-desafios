@@ -86,6 +86,34 @@ Para garantir o padrão de qualidade e aceitação de novos cenários na suíte,
 
 ---
 
+## Principais Desafios e Aprendizados
+
+**Validação de Contratos (JSON Schema)**
+* **Desafio:** Validar erros de requisição (Status 400) buscando uma chave genérica `"message"`, o que causava falhas nos testes.
+* **Solução encontrada:** Compreender a regra de negócio da API, que devolve exatamente o nome do campo ausente (ex: `"nome": "nome é obrigatório"`). Essa estrutura foi adaptada nos testes com a visão de que isso é vital para o ecossistema da aplicação, pois permite que o Front-End mapeie o erro e destaque exatamente qual *input* deve ficar vermelho na tela do usuário.
+
+**Compreensão do Retorno de Verbos HTTP**
+* **Desafio:** Lidar com a falha na validação de schemas em rotas de Criação (`POST`), Atualização (`PUT`) e Deleção (`DELETE`), por esperar que a API devolvesse o objeto inteiro no corpo da resposta.
+* **Solução encontrada:** Entender que essas rotas de mutação devolvem apenas uma confirmação (`message` e `_id`). A solução foi reestruturar o código e separar claramente os Schemas de Sucesso de mutação dos Schemas de Leitura (`GET`).
+
+**Encadeamento de Requisições e Regras de Negócio**
+* **Desafio:** Na rota de Carrinhos, lidar com erros `400 Bad Request` ao tentar enviar o payload completo de um produto diretamente para a rota de criação do carrinho.
+* **Solução encontrada:** Mapear a arquitetura relacional da API e orquestrar o estado dos testes. A solução foi automatizar um fluxo onde primeiro realiza-se um `POST` de Produto, extrai-se o seu `_id` gerado dinamicamente, monta-se o novo payload com esse ID e só então realiza-se o `POST` do Carrinho.
+
+**Mutabilidade de Dicionários em Python**
+* **Desafio:** Lidar com falhas misteriosas em testes subsequentes após testar cenários de campos ausentes usando o método `.pop("chave")` direto no payload da *fixture*.
+* **Solução encontrada:** Compreender que dicionários em Python funcionam por referência (o que alterava o estado global do dado). A adoção do método `.copy()` no início de cada teste foi implementada para garantir o isolamento e a idempotência das validações.
+
+**Rigor do Pytest com Fixtures**
+* **Desafio:** Erros de injeção de dependências do Pytest causados por pequenos desvios de nomenclatura (como chamar a fixture de `cart_url` no teste quando no `conftest.py` estava `carts_url`).
+* **Solução encontrada:** Desenvolver uma leitura ativa e crítica dos logs do Pytest no terminal, utilizando a própria mensagem de erro como principal ferramenta de *troubleshooting* para mapear e corrigir os parâmetros.
+
+**O Fluxo de Desenvolvimento Local**
+* **Desafio:** Lidar com falsos positivos/negativos, onde o terminal exibia erros de execuções antigas porque o arquivo com o código corrigido não havia sido salvo no editor (VS Code).
+* **Solução encontrada:** Reforço prático sobre a atenção aos detalhes do ambiente de desenvolvimento (identificando indicadores visuais de arquivos não salvos) e o estabelecimento de um ritmo de *debug* mais metódico e consciente.
+
+---
+
 ## Métricas e Resultados
 
 * **Cobertura de Testes:** *[Inserir porcentagem de cobertura ou status de execução]*
