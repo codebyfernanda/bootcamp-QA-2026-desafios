@@ -16,14 +16,18 @@ Durante a [quarta semana](https://github.com/codebyfernanda/bootcamp-QA-2026-des
 
 ---
 
-## Plano de Testes
+# Plano de Testes
 
-### 1. Objetivo e Estratégia
+<details>
+  <summary><b> ### 1. Objetivo e Estratégia </b></summary>
 * **Objetivo:** Assegurar a qualidade funcional, estabilidade de contrato e confiabilidade dos principais fluxos de negócio da API ServeRest.
 * **Estratégia:** Automação de testes funcionais e de contrato na camada de Back-end (API).
 * **Stack Tecnológica:** Python 3.13.x, Pytest, Requests e JSONSchema.
 * **Escopo Coberto:** Endpoints `/login`, `/usuarios`, `/produtos` e `/carrinhos`.
-* **Fora de Escopo:** Testes de carga, estresse e performance.
+* **Fora de Escopo:** Testes de carga, estresse e performance. 
+</details>
+
+
 
 ### 2. Cenários de Teste Mapeados
 
