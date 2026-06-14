@@ -30,7 +30,7 @@ Durante a quarta semana do Bootcamp, a arquitetura do projeto foi refatorada seg
 #### Módulo: `test_login.py` (Autenticação)
 * `test_login_successfully` (POST - 200)
 * `test_login_invalid_password` (POST - 401)
-* `test_login_nonexistent_user` (POST - 401)
+* `test_login_nonexistent_user` (POST - 404)
 * `test_login_without_name` (POST - 400)
 * `test_login_without_email` (POST - 400)
 * `test_login_without_password` (POST - 400)
@@ -43,21 +43,21 @@ Durante a quarta semana do Bootcamp, a arquitetura do projeto foi refatorada seg
 * `test_delete_user_successfully_by_id` (DELETE - 200 / 204)
 
 #### Módulo: `test_produtos.py` (CRUD de Produtos)
-* `test_create_product_successfully_with_admin_token` (POST - 201)
-* `test_create_product_without_admin_token` (POST - 403 / 401)
+* `test_create_product_successfully_with_admin_token` (POST - 200 / 201)
+* `test_create_product_without_admin_token` (POST - 401 / 403)
 * `test_create_product_without_name` (POST - 400)
 * `test_create_product_without_price` (POST - 400)
 * `test_create_product_without_description` (POST - 400)
-* `test_search_product_by_id` (GET - 200)
-* `test_update_product_with_token` (PUT - 200)
+* `test_search_product_by_id` (GET - 200  / 201)
+* `test_update_product_with_token` (PUT - 200 / 201)
 * `test_update_product_without_token` (PUT - 401)
 * `test_delete_product_successfully` (DELETE - 200 / 204)
 
 #### Módulo: `test_carrinhos.py` (Gestão de Carrinhos)
 * `test_create_cart_successfully` (POST - 201)
-* `test_create_cart_insufficient_stock` (POST - 400)
-* `test_conclude_purchase_success` (DELETE / POST - 200)
-* `test_cancel_purchase_and_stock_return` (DELETE - 200)
+* `test_create_cart_insufficient_stock` (POST - 400 / 422)
+* `test_conclude_purchase_success` (DELETE 200 / 204)
+* `test_cancel_purchase_and_stock_return` (DELETE - 200 / 204)
 
 ---
 
