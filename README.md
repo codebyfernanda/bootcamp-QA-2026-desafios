@@ -84,20 +84,7 @@ Para garantir o padrão de qualidade e aceitação de novos cenários na suíte,
 
 ```
 
----
-
-## Principais Desafios e Aprendizados
-
-| Desafio | Solução Encontrada |
-| :--- | :--- |
-| **Validação de Contratos (JSON Schema)** | Mapeamento das chaves de erro específicas por campo (ex: `"nome": "nome é obrigatório"`) em vez de chaves genéricas, facilitando o tratamento de erros no Front-End. |
-| **Retorno de Verbos HTTP** | Separação estratégica entre *Schemas* de mutação (apenas `message` e `_id`) e *Schemas* de leitura (objeto completo), ajustando as expectativas das validações. |
-| **Encadeamento de Requisições** | Implementação de fluxos encadeados (POST Produto > Extração de `_id` > Montagem de Payload > POST Carrinho) para respeitar a arquitetura relacional da API. |
-| **Mutabilidade de Dados** | Utilização do método `.copy()` em dicionários para evitar que a manipulação de dados em um teste afetasse o estado original da *fixture* nos testes subsequentes. |
-| **Rigor do Pytest (Nomenclatura)** | Desenvolvimento de leitura crítica dos logs de erro do Pytest para identificar rapidamente desvios de nomenclatura entre fixtures e parâmetros injetados. |
-| **Ambiente de Desenvolvimento** | Reforço da atenção aos indicadores visuais de salvamento de arquivos no VS Code, eliminando falsos positivos causados por execução de código desatualizado. |
-
----
+--- 
 
 # Métricas e Resultados
 
@@ -121,22 +108,46 @@ O cálculo foi realizado através da fórmula de *Operator Coverage*:
 Como a API expõe 10 operações distintas entre os quatro recursos (Login, Usuários, Produtos e Carrinhos) e todos os fluxos foram devidamente automatizados, a suíte alcançou **100% de cobertura de operações**.
 
 ---
-### 💡 Qualidade Além da Cobertura
+### Qualidade Além da Cobertura
 Além de atingir 100% de cobertura de operadores, a suíte foca na **qualidade das validações**:
 
 * **Status Code Coverage:** Validação de fluxos de sucesso (200, 201) e cenários de erro esperados (400, 401, 403, 404).
 * **JSON Schema Validation:** Garantia de que o contrato da API está sendo respeitado em cada resposta, assegurando que o Front-End receba os dados esperados.
 * **Fluxo de Integração:** Testes que orquestram dependências, como a criação de um produto para uso posterior na criação de um carrinho, simulando o uso real do sistema.
 
-* **Bugs Encontrados:** *[Listar eventuais falhas identificadas na API pública durante as validações]*
-* **Conclusão:** *[Breve resumo sobre a estabilidade observada nos endpoints avaliados]*
+--- 
 
 ---
+
+## Principais Desafios e Aprendizados
+
+| Desafio | Solução Encontrada |
+| :--- | :--- |
+| **Validação de Contratos (JSON Schema)** | Mapeamento das chaves de erro específicas por campo (ex: `"nome": "nome é obrigatório"`) em vez de chaves genéricas, facilitando o tratamento de erros no Front-End. |
+| **Retorno de Verbos HTTP** | Separação estratégica entre *Schemas* de mutação (apenas `message` e `_id`) e *Schemas* de leitura (objeto completo), ajustando as expectativas das validações. |
+| **Encadeamento de Requisições** | Implementação de fluxos encadeados (POST Produto > Extração de `_id` > Montagem de Payload > POST Carrinho) para respeitar a arquitetura relacional da API. |
+| **Mutabilidade de Dados** | Utilização do método `.copy()` em dicionários para evitar que a manipulação de dados em um teste afetasse o estado original da *fixture* nos testes subsequentes. |
+| **Rigor do Pytest (Nomenclatura)** | Desenvolvimento de leitura crítica dos logs de erro do Pytest para identificar rapidamente desvios de nomenclatura entre fixtures e parâmetros injetados. |
+| **Ambiente de Desenvolvimento** | Reforço da atenção aos indicadores visuais de salvamento de arquivos no VS Code, eliminando falsos positivos causados por execução de código desatualizado. |
+
+---
+
+## Conclusão
+
+O desafio foi foi um verdadeiro mergulho no que significa, na prática, ser uma *Quality Engineer*. Entendi que, quando estruturamos testes bem organizados, não estamos apenas automatizando o trabalho manual, mas construindo uma camada de segurança que dá confiança para o time evoluir o produto sem medo.
+
+A refatoração que fiz nesta quarta semana me trouxe um *insight* valioso: a qualidade é parte intrínseca da arquitetura. Quando tratamos os contratos de API com o mesmo cuidado que tratamos a interface do usuário, garantimos que o ecossistema inteiro — do *back-end* ao *front-end* — fale a mesma língua. Sigo motivada e com a bagagem reforçada, pronta para aplicar essa visão estratégica de QA em cenários ainda mais complexos.
+
+---
+
+## Agradecimentos Especiais
+Gostaria de expressar meus agradecimentos à Squad 2 pelo engajamento e troca de conhecimento. Agradeço especialmente aos meus colegas [Renan Pacheco](https://github.com/Renanpacheco) e [Vitor Kunicki](https://github.com/vitto2099) pelo suporte técnico fundamental.
 
 ## Referências Utilizadas em Consultas
 
 * [AAA Pattern in Test Automation - Semaphore CI](https://semaphore.io/blog/aaa-pattern-test-automation)
 * [Pytest Documentation & Best Practices](https://docs.pytest.org/)
+* [Como verificar a cobertura de testes de APIs REST](https://medium.com/revista-dtar/como-verificar-a-cobertura-de-testes-da-api-rest-9e2f745564b)
 
 ---
 
