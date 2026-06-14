@@ -99,7 +99,7 @@ Para garantir o padrão de qualidade e aceitação de novos cenários na suíte,
 
 ---
 
-## Métricas e Resultados
+# Métricas e Resultados
 
 ## Cobertura de Testes (Test Coverage)
 
