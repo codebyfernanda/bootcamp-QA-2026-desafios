@@ -6,7 +6,7 @@ Este projeto consiste em uma suíte de testes automatizados desenvolvida em **Py
 
 ## Evolução da Arquitetura e Refatoração (Semana 04)
 
-Durante a quarta semana do Bootcamp, a arquitetura do projeto foi refatorada seguindo as melhores práticas de Engenharia de Qualidade para eliminar gargalos de manutenção e melhorar a legibilidade do código:
+Durante a [quarta semana](https://github.com/codebyfernanda/bootcamp-QA-2026-desafios/tree/main/semana_004) do Bootcamp, a arquitetura do projeto foi refatorada seguindo as melhores práticas de Engenharia de Qualidade para eliminar gargalos de manutenção e melhorar a legibilidade do código:
 
 * **Modularização por Domínio de Negócio:** Reorganização dos arquivos de teste em módulos claros por contexto (Login, Usuários, Produtos e Carrinhos), abandonando abordagens monolíticas.
 * **Adoção do Padrão AAA (Arrange, Act, Assert):** Remoção de blocos redundantes de `try/except` que poluíam o código. A estrutura agora segue rigorosamente o fluxo de *Organizar, Agir e Validar*, tornando os testes focados e legíveis.
