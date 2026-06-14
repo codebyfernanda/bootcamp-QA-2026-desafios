@@ -41,6 +41,8 @@ Durante a quarta semana do Bootcamp, a arquitetura do projeto foi refatorada seg
 * `test_create_user_duplicated_email` (POST - 400)
 * `test_list_all_users` (GET - 200)
 * `test_delete_user_successfully_by_id` (DELETE - 200 / 204)
+* `test_update_user_successfully` (PUT - 200)
+* `test_update_user_duplicated_email` (PUT - 400)
 
 #### Módulo: `test_produtos.py` (CRUD de Produtos)
 * `test_create_product_successfully_with_admin_token` (POST - 200 / 201)
@@ -97,15 +99,15 @@ Para garantir a robustez e a qualidade da API, a estratégia de automação foi 
 | Endpoint | POST | GET | PUT | DELETE | Total de Operações |
 | :--- | :---: | :---: | :---: | :---: | :---: |
 | `/login` | ✅ | - | - | - | 1 |
-| `/usuarios` | ✅ | ✅ | - | ✅ | 3 |
+| `/usuarios` | ✅ | ✅ | ✅ | ✅ | 4 |
 | `/produtos` | ✅ | ✅ | ✅ | ✅ | 4 |
 | `/carrinhos` | ✅ | - | - | ✅ | 2 |
-| **Totais** | **4** | **2** | **1** | **3** | **10 / 10** |
+| **Totais** | **4** | **2** | **2** | **3** | **11 / 11** |
 
 ### Metodologia de Cálculo
 O cálculo foi realizado através da fórmula de *Operator Coverage*:
 
-Como a API expõe 10 operações distintas entre os quatro recursos (Login, Usuários, Produtos e Carrinhos) e todos os fluxos foram devidamente automatizados, a suíte alcançou **100% de cobertura de operações**.
+Como a API expõe 11 operações distintas entre os quatro recursos (Login, Usuários, Produtos e Carrinhos) e todos os fluxos foram devidamente automatizados, a suíte alcançou **100% de cobertura de operações**.
 
 ---
 ## Qualidade Além da Cobertura
