@@ -144,7 +144,11 @@ A refatoração que fiz nesta quarta semana me trouxe um *insight* valioso: a qu
 
 * [AAA Pattern in Test Automation - Semaphore CI](https://semaphore.io/blog/aaa-pattern-test-automation)
 * [Pytest Documentation & Best Practices](https://docs.pytest.org/)
+* [Pytest: Help your tests do more](https://docs.pytest.org/en/stable/explanation/goodpractices.html)
 * [Como verificar a cobertura de testes de APIs REST](https://medium.com/revista-dtar/como-verificar-a-cobertura-de-testes-da-api-rest-9e2f745564b)
+* [Test Coverage Criteria for RESTful Web APIs](https://www.researchgate.net/publication/327774902_Test_coverage_criteria_for_RESTful_web_APIs) 
+* [Introduction to Contract Testing](https://martinfowler.com/articles/contract-testing.html)
+* [Understanding JSON Schema](https://json-schema.org/learn/getting-started-step-by-step) 
 
 ---
 
