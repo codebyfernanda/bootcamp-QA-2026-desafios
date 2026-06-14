@@ -108,7 +108,7 @@ O cálculo foi realizado através da fórmula de *Operator Coverage*:
 Como a API expõe 10 operações distintas entre os quatro recursos (Login, Usuários, Produtos e Carrinhos) e todos os fluxos foram devidamente automatizados, a suíte alcançou **100% de cobertura de operações**.
 
 ---
-### Qualidade Além da Cobertura
+## Qualidade Além da Cobertura
 Além de atingir 100% de cobertura de operadores, a suíte foca na **qualidade das validações**:
 
 * **Status Code Coverage:** Validação de fluxos de sucesso (200, 201) e cenários de erro esperados (400, 401, 403, 404).
@@ -152,11 +152,11 @@ A refatoração que fiz nesta quarta semana me trouxe um *insight* valioso: a qu
 
 ---
 
-## Como Executar este Repositório
+### Como Executar este Repositório
 
 1. **Clone o repositório:**
 ```bash
-git clone [https://github.com/codebyfernanda/bootcamp-QA-2026-desafios.git](https://github.com/codebyfernanda/bootcamp-QA-2026-desafios.git)
+git clone <https://github.com/codebyfernanda/bootcamp-QA-2026-desafios.git>
 cd bootcamp-QA-2026-desafios
 
 ```
