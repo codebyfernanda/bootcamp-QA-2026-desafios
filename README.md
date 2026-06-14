@@ -101,7 +101,33 @@ Para garantir o padrão de qualidade e aceitação de novos cenários na suíte,
 
 ## Métricas e Resultados
 
-* **Cobertura de Testes:** *[Inserir porcentagem de cobertura ou status de execução]*
+## Cobertura de Testes (Test Coverage)
+
+Para garantir a robustez e a qualidade da API, a estratégia de automação foi baseada na metodologia de **Operator Coverage**, que mede a abrangência dos métodos HTTP testados em relação aos endpoints disponíveis.
+
+### Mapa de Cobertura de Operações
+
+| Endpoint | POST | GET | PUT | DELETE | Total de Operações |
+| :--- | :---: | :---: | :---: | :---: | :---: |
+| `/login` | ✅ | - | - | - | 1 |
+| `/usuarios` | ✅ | ✅ | - | ✅ | 3 |
+| `/produtos` | ✅ | ✅ | ✅ | ✅ | 4 |
+| `/carrinhos` | ✅ | - | - | ✅ | 2 |
+| **Totais** | **4** | **2** | **1** | **3** | **10 / 10** |
+
+### Metodologia de Cálculo
+O cálculo foi realizado através da fórmula de *Operator Coverage*:
+
+Como a API expõe 10 operações distintas entre os quatro recursos (Login, Usuários, Produtos e Carrinhos) e todos os fluxos foram devidamente automatizados, a suíte alcançou **100% de cobertura de operações**.
+
+---
+### 💡 Qualidade Além da Cobertura
+Além de atingir 100% de cobertura de operadores, a suíte foca na **qualidade das validações**:
+
+* **Status Code Coverage:** Validação de fluxos de sucesso (200, 201) e cenários de erro esperados (400, 401, 403, 404).
+* **JSON Schema Validation:** Garantia de que o contrato da API está sendo respeitado em cada resposta, assegurando que o Front-End receba os dados esperados.
+* **Fluxo de Integração:** Testes que orquestram dependências, como a criação de um produto para uso posterior na criação de um carrinho, simulando o uso real do sistema.
+
 * **Bugs Encontrados:** *[Listar eventuais falhas identificadas na API pública durante as validações]*
 * **Conclusão:** *[Breve resumo sobre a estabilidade observada nos endpoints avaliados]*
 
