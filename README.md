@@ -11,7 +11,7 @@ Durante a quarta semana do Bootcamp, a arquitetura do projeto foi refatorada seg
 * **Modularização por Domínio de Negócio:** Reorganização dos arquivos de teste em módulos claros por contexto (Login, Usuários, Produtos e Carrinhos), abandonando abordagens monolíticas.
 * **Adoção do Padrão AAA (Arrange, Act, Assert):** Remoção de blocos redundantes de `try/except` que poluíam o código. A estrutura agora segue rigorosamente o fluxo de *Organizar, Agir e Validar*, tornando os testes focados e legíveis.
 * **Centralização da Base URL:** Criação de *fixtures* dedicadas para gerenciar a URL base da API, eliminando a repetição de strings nos testes e facilitando a transição entre diferentes ambientes de teste.
-* **Gestão de Estado (Setup/Teardown):** Implementação de rotinas automatizadas de limpeza da base de dados (`teardown`) executadas logo após o ciclo de vida do teste (`yield`), garantindo a independência entre os cenários.
+* **Gestão de Estado (Setup/Teardown):** Implementação de rotinas automatizadas de limpeza da base de dados (`teardown`), garantindo a independência entre os cenários.
 * **Testes de Contrato (Contract Testing):** Evolução das validações simples de `status_code` e chaves isoladas para uma validação estrutural completa do payload de resposta, utilizando a biblioteca `jsonschema`.
 
 ---
