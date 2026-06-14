@@ -34,7 +34,7 @@ Durante a quarta semana do Bootcamp, a arquitetura do projeto foi refatorada seg
 * `test_login_without_name` (POST - 400)
 * `test_login_without_email` (POST - 400)
 * `test_login_without_password` (POST - 400)
-* `test_login_without_id` (POST - 400)
+* `test_login_without_administrador` (POST - 400)
 
 #### Módulo: `test_usuarios.py` (CRUD de Usuários)
 * `test_create_user_successfully` (POST - 201)
