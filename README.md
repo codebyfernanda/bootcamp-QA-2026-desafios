@@ -140,9 +140,6 @@ A refatoração que fiz nesta quarta semana me trouxe um *insight* valioso: a qu
 
 ---
 
-## Agradecimentos Especiais
-Gostaria de expressar meus agradecimentos à Squad 2 pelo engajamento e troca de conhecimento. Agradeço especialmente aos meus colegas [Renan Pacheco](https://github.com/Renanpacheco) e [Vitor Kunicki](https://github.com/vitto2099) pelo suporte técnico fundamental.
-
 ## Referências Utilizadas em Consultas
 
 * [AAA Pattern in Test Automation - Semaphore CI](https://semaphore.io/blog/aaa-pattern-test-automation)
