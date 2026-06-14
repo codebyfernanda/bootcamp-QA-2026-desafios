@@ -60,6 +60,7 @@ Para garantir o padrão de qualidade, cada teste deve atender aos critérios:
 │   └── test_carrinhos.py   # Testes do módulo de carrinhos
 
 ```
+<details>
 
 --- 
 
